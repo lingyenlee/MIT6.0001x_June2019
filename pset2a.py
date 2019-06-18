@@ -5,69 +5,33 @@ Created on Sun Jun 16 15:22:34 2019
 
 @author: apple
 """
-#
-#def calBal(balance, annualInterestRate, monthlyPaymentRate, month):
-#    monthlyIntRate = annualInterestRate/12.0
-#    minMonthlyPayment = monthlyPaymentRate * balance
-#    monthlyUnpaidBal = balance - minMonthlyPayment
-#    updatedBal = monthlyUnpaidBal + monthlyUnpaidBal*monthlyIntRate
-#        
-#    if month >= 12:
-#        print("Remaining balace:", round(updatedBal,2))
-#        return round(updatedBal, 2)
-#    else: 
-#        
-#        print("Month", month, "Remaining balance:", round(updatedBal,2))
-#        month += 1
-#        return calBal(round(updatedBal,2), annualInterestRate, monthlyPaymentRate, month)
-#
-#calBal(42, 0.2, 0.04, 1)
-#monthlyIntRate = annualInterestRate/12.0
-#minMonthlyPayment = monthlyPaymentRate * balance
-#monthlyUnpaidBal = balance - minMonthlyPayment
 
-#pset 2a
-#balance = 42
-#annualInterestRate = 0.2
-#monthlyPaymentRate = 0.04
-#
-#month = 0
-#
-#while month < 12:
-#    month += 1
-#    monthlyIntRate = annualInterestRate/12.0
-#    minMonthlyPayment = monthlyPaymentRate * balance
-#    monthlyUnpaidBal = balance - minMonthlyPayment
-#    updatedBal =  monthlyUnpaidBal + monthlyUnpaidBal*monthlyIntRate
-#    balance = updatedBal
-#
-#print("Remaining balance:",round(updatedBal,2) )
+"""
+Write a program to calculate the credit card balance after one year 
+if a person only pays the minimum monthly payment required by the 
+credit card company each month.
+"""
 
-#pset 2b
-balance = 3329
-annualInterestRate = 0.2
-fixedPayment = 0
+balance = 42; 
+annualInterestRate = 0.2; 
+monthlyPaymentRate = 0.04
 
-while balance > 0:
-    fixedPayment += 10
+month = 0
+
+#iterate through each month while less than 12
+while month < 12:
+#increment each month
+    month += 1
+#calculate monthly interest rate
     monthlyIntRate = annualInterestRate/12.0
-    monthlyUnpaidBal = balance - fixedPayment
+#calculate monthly payment by monthly payment rate
+    minMonthlyPayment = monthlyPaymentRate * balance
+#calculate unpaid balance by substracting balance from monthly payment
+    monthlyUnpaidBal = balance - minMonthlyPayment
+#calculate updated balance by adding in interest to unpaid balance
     updatedBal =  monthlyUnpaidBal + monthlyUnpaidBal*monthlyIntRate
+#store the updated balance to balance for recurring loops 
     balance = updatedBal
-    print("balance is", round(balance,1))
-    print("payment is", fixedPayment)
-    
-    
-print("Lowest Payment", fixedPayment)
 
-    
-
-
-
-
-
-
-
-
-
-    
+#print the balance at the end of the iteration
+print("Remaining balance:",round(updatedBal,2) )

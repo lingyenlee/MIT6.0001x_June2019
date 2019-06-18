@@ -4,6 +4,10 @@
 Created on Mon Jun 10 09:45:08 2019
 
 @author: apple
+
+Write a program that counts up the number of vowels contained 
+in the string s. Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. 
+For example, if s = 'azcbobobegghakl', your program should print:
 """
 
 s = 'azcbobobegghakl'
@@ -16,6 +20,14 @@ s = 'azcbobobegghakl'
 #        
 #print(count)
 
+"""
+Assume s is a string of lower case characters.
+
+Write a program that prints the number of times the string 'bob' occurs in s. 
+For example, if s = 'azcbobobegghakl', then your program should print
+Number of times bob occurs is: 2
+"""
+
 #pset1 problem 2
 #match = 0
 #for i in range(len(s)):
@@ -24,7 +36,16 @@ s = 'azcbobobegghakl'
 #
 #print(match)
 
-
+#pset problem 3
+"""
+Write a program that prints the longest substring of s in which the 
+letters occur in alphabetical order. For example, if s = 'azcbobobegghakl', 
+then your program should print
+Longest substring in alphabetical order is: beggh
+In the case of ties, print the first substring. For example, if s = 'abcbcd', 
+then your program should print
+Longest substring in alphabetical order is: abc
+"""
 prevChar = ""
 currentString = ""
 longestString = ""
